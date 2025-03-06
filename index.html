@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logger de Cookies</title>
+</head>
+<body>
+    <h1>Registrar Cookies de la Página</h1>
+    <button onclick="logCookies()">Ver Cookies</button>
+    <pre id="cookieOutput"></pre>
+
+    <script>
+        function logCookies() {
+            const cookies = document.cookie; // Obtener las cookies de la página
+            const output = document.getElementById('cookieOutput');
+            if (cookies) {
+                output.textContent = "Cookies registradas: " + cookies;
+            } else {
+                output.textContent = "No hay cookies registradas en esta página.";
+            }
+        }
+    </script>
+</body>
+</html>
